@@ -11,10 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
-         android:id="@+id/name"
-        android:textSize="50dp"
+        android:elevation="30dp"
+        android:textStyle="bold"
+        android:textSize="35dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:textColor="#5B0BAA"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,22 +38,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_marginLeft="40dp"
-            
-            android:id="@+id/emailcontainer"
-            app:layout_constraintTop_toBottomOf="@+id/space111"
+            android:layout_marginLeft="40dp"    
+            app:boxCornerRadiusTopStart="7dp"
+            app:boxCornerRadiusTopEnd="7dp"
+            app:boxCornerRadiusBottomEnd="7dp"
+            app:boxCornerRadiusBottomStart="7dp"
             android:layout_marginTop="70dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content">
             <EditText
-                 android:imeOptions="actionNext"
+                android:imeOptions="actionNext"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:hint="Enter Username"
-                android:drawablePadding="10dp"
-               android:inputType="text"
+                android:drawablePadding="15dp"
+               android:id="@+id/usernamelogintext"
                 android:textColorHint="@color/material_grey_600"
                 android:drawableLeft="@drawable/user"
                 android:drawableTint="@color/material_grey_600"
@@ -62,20 +66,24 @@
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:id="@+id/passwordcontainer"
-            app:layout_constraintTop_toBottomOf="@+id/space111"
+            app:boxCornerRadiusTopStart="7dp"
+            app:boxCornerRadiusTopEnd="7dp"
+            app:boxCornerRadiusBottomEnd="7dp"
+            app:boxCornerRadiusBottomStart="7dp"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_height="wrap_content">
+            >
             <EditText
                 android:layout_width="match_parent"
                 android:hint="Enter Password"
-                
+                android:fontFamily="sans-serif"
                android:inputType="textPassword"
-                android:drawablePadding="10dp"
+               android:drawablePadding="15dp"
                 android:textColorHint="@color/material_grey_600"
-                android:drawableLeft="@drawable/password"
+                android:drawableStart="@drawable/password"
+                 android:id="@+id/passwordlogintext"
                 android:drawableTint="@color/material_grey_600"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="40dp"
@@ -93,26 +101,28 @@
     <com.google.android.material.button.MaterialButton
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space222"
         android:text="Login"
         android:layout_marginLeft="95dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="38dp"
         android:layout_marginRight="95dp"
         app:cornerRadius="50dp"
+        android:textAllCaps="false"
         android:backgroundTint="#1C58EE"
         android:elevation="10px"
+         android:textSize="20dp"
         android:id="@+id/loginbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <com.google.android.material.button.MaterialButton
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space222"
         android:text="Register"
+        android:textSize="20dp"
         android:elevation="50dp"
         android:layout_marginLeft="95dp"
         android:layout_marginTop="4dp"
         android:layout_marginRight="95dp"
+        android:textAllCaps="false"
         app:cornerRadius="50dp"
         android:backgroundTint="#1C58EE"
         android:id="@+id/registerbutton"
@@ -132,29 +142,21 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="7dp"
         android:orientation="horizontal">
-
         <ImageView
             android:layout_height="40dp"
             android:layout_width="50dp"
             android:id="@+id/facebook"
             android:gravity="center_horizontal"
-            android:src="@drawable/facebook"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true">
+            android:src="@drawable/facebook">
         </ImageView>
-
-
         <ImageView
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_width="50dp"
-            
             android:layout_marginTop="30dp"
             android:layout_marginLeft="3dp"
             android:id="@+id/google"
-            android:src="@drawable/google"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true">
+            android:src="@drawable/google">
         </ImageView>
 
     </LinearLayout>
